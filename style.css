@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body,
+    html {
+        height: 100%;
+    }
+    html {
+        font-family: Montserrat, system-ui, sans-serif;
+        font-weight: 500;
+    }
+}
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+button[data-icon='shopping-cart']::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    background-image: url("../images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+}
+
